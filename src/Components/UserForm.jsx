@@ -43,7 +43,7 @@ export class UserForm extends Component {
   render() {
     const { step } = this.state;
     const { DateAndTime, FloorNo, Location, NameOfOrg, Purpose, MeetingAgenda, ResourcesAvailable, Requirements} = this.state;
-    const values =  { DateAndTime, FloorNo, Location, NameOfOrg, Purpose, MeetingAgenda, ResourcesAvailable, Requirements }
+    const values =  { DateAndTime, FloorNo, Location, NameOfOrg, Purpose, MeetingAgenda, ResourcesAvailable, Requirements};
 
     switch (step) {
       case 1:

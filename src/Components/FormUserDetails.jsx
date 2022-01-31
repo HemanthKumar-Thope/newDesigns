@@ -1,87 +1,79 @@
- import React, { Component } from "react";
+import React, { Component } from "react";
 import { TextField, AppBar } from "material-ui";
 import { MuiThemeProvider } from "material-ui/styles";
-import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-
+import Button from '@material-ui/core/Button';
 
 export class FormUserDetails extends Component {
 
   render() {
-    const { values, handleChange, back ,continues} = this.props;
+    const { values, handleChange ,continues} = this.props;
     return (
       <MuiThemeProvider>
         <React.Fragment>
-          <AppBar title="Enter Meeting detail" iconClassNameLeft />
+          <AppBar title="Enter Meeting Details" iconClassNameLeft />
           <TextField
-            hintText="Enter Your Date And Time"
-            floatingLabelText="Date and time"
+            hintText="Enter Date and Time"
+            floatingLabelText="Date and Time"
             onChange={handleChange("DateAndTime")}
             defaultValue={values.DateAndTime}
           />
           <br />
           <TextField
-            hintText="Enter Floor Number"
-            floatingLabelText="Enter Floor Number"
+            hintText="Enter FloorNo"
+            floatingLabelText="FloorNo"
             onChange={handleChange("FloorNo")}
             defaultValue={values.FloorNo}
           />
           <br />
           <TextField
-            hintText="Enter the Location"
+            hintText="Enter Your Location"
             floatingLabelText="Location"
             onChange={handleChange("Location")}
             defaultValue={values.Location}
           />
-
+          <br />
           <TextField
-            hintText="NameOfOrg"
+            hintText="Enter Your NameOfOrg"
             floatingLabelText="NameOfOrg"
             onChange={handleChange("NameOfOrg")}
             defaultValue={values.NameOfOrg}
           />
-
+          <br />
           <TextField
-            hintText="Purpose"
+            hintText="Enter Your Purpose"
             floatingLabelText="Purpose"
             onChange={handleChange("Purpose")}
             defaultValue={values.Purpose}
           />
-
+          <br />
           <TextField
-            hintText="MeetingAgenda"
+            hintText="Enter Your MeetingAgenda"
             floatingLabelText="MeetingAgenda"
             onChange={handleChange("MeetingAgenda")}
             defaultValue={values.MeetingAgenda}
           />
-
+          <br />
           <TextField
-            hintText="ResourcesAvailable"
+            hintText="Enter Your ResourcesAvailable"
             floatingLabelText="ResourcesAvailable"
             onChange={handleChange("ResourcesAvailable")}
             defaultValue={values.ResourcesAvailable}
           />
-
+          <br />
           <TextField
-            hintText="Requirements"
+            hintText="Enter Your Requirements"
             floatingLabelText="Requirements"
             onChange={handleChange("Requirements")}
             defaultValue={values.Requirements}
           />
-
-          
           <br />
-          <ArrowBackIcon
-            onClick={back}
-            fontSize="large"
-            className="nextMenu"
-          />
 
-          <ArrowForwardIcon
-            onClick={continues}
-            fontSize='large'
-            className='nextMenu'
-          />
+          <Button
+              color="success"
+              variant="contained"
+              onClick={continues}
+            >Continue</Button>
+          
         </React.Fragment>
       </MuiThemeProvider>
     );
